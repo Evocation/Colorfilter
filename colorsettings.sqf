@@ -361,6 +361,7 @@ if (_this select 0) then {
 	colouroptionsmenu = colouroptionsmenu + [["Exit",[20],"",-5,[["expression",""]],"1","1"]];
 	showCommandingMenu "#USER:colouroptionsmenu";
 } else {
+	colourfiltervar = [1,"",true];
 	systemChat "Colorfilter Script loaded. Check your NVGoggles options.";
 	if (typename (profileNamespace getVariable "Effectlevel") != "SCALAR") then {
 		colourfiltervar set [0,1];
