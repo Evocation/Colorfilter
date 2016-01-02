@@ -364,7 +364,6 @@ if (_this select 0) then {
 	colourfiltervar = [1,"",true];
 	systemChat "Colorfilter Script loaded. Check your NVGoggles options.";
 	if ((profileNamespace getVariable ["Effectlevel",0]) == 0) then {
-		diag_log "babydonthurtme";
 		colourfiltervar set [0,1];
 		colourfiltervar set [2,true];
 		profileNamespace setVariable ["Effectlevel",colourfiltervar select 0];
@@ -372,7 +371,6 @@ if (_this select 0) then {
 		colourfiltervar set [2,false];
 		[colourfiltervar select 0] spawn colourfilter;
 	} else {
-		diag_log "NOMORE";
 		colourfiltervar set [0,(profileNamespace getVariable "Effectlevel")];
 		colourfiltervar set [2,true];
 		[colourfiltervar select 0] spawn colourfilter;
